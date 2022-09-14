@@ -32,23 +32,23 @@ console.log(playRound(playerSelection, computerSelection));
 
 // playing a few rounds of rock paper scissors
 function game() {
-    let computer_point = 0;
-    let player_point = 0;
+    let computerPoint = 0;
+    let playerPoint = 0;
     for(let i = 0; i < 5; i++) {
         let pSelection = prompt("Yo what are you playing?")
         let cSelection = getComputerChoice()
-        let point_calculator = playRound(pSelection, cSelection);
-        if (point_calculator === 1) {
-            computer_point++;
-        } else if (point_calculator === 2) {
-            player_point++;
+        let pointCalculator = playRound(pSelection, cSelection);
+        if (pointCalculator === 1) {
+            computerPoint++;
+        } else if (pointCalculator === 2) {
+            playerPoint++;
         }
     }
-    console.log(computer_point);
-    console.log(player_point)
-    if (computer_point > player_point) {
+    console.log(computerPoint);
+    console.log(playerPoint)
+    if (computerPoint > playerPoint) {
         console.log("Computer rules!");
-    } else if (computer_point < player_point) {
+    } else if (computerPoint < playerPoint) {
         console.log("Humans are better :)");
     } else {
         console.log("It is a tie!");
